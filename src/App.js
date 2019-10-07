@@ -2,12 +2,14 @@ import React from 'react'
 
 
 
-function App() {
-	return ( 
-		<div>
-			Hello Todo App	
-		</div>
-	);
+class App extends React.Component {
+	render() {
+		return (
+			<div>
+				Hello Todo App	
+			</div>
+		)
+	}
 }
 
 
