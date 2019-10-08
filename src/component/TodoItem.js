@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-class ToDoItem extends React.Component {
+class TodoItem extends React.Component {
 
 	render() {
 		const key 			= this.props.listofToDoObj.key
@@ -34,4 +34,4 @@ class ToDoItem extends React.Component {
 
 
 
-export default ToDoItem
+export default TodoItem

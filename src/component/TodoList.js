@@ -1,5 +1,5 @@
 import React from 'react'
-import ToDoItem from './ToDoItem'
+import TodoItem from './TodoItem'
 
 
 class TodoList extends React.Component {
@@ -8,7 +8,7 @@ class TodoList extends React.Component {
 		// render earch object inside the todoList array
 		let renderTodoList = this.props.todoList.map(( listofToDoObj ) => {
 			return(
-				<ToDoItem 
+				<TodoItem 
 					listofToDoObj={ listofToDoObj }
 					key={ listofToDoObj.key }
 					onChange={ this.props.onChange } 
