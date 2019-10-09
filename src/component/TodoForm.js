@@ -10,7 +10,7 @@ function TodoForm( props ) {
 	const isDisabled 	= value.length === 0 ? true : false
 	
 	return(
-		<form onSubmit={ onsubmit } >
+		<form className="TodoApp__form" onSubmit={ onsubmit } >
 			<input 
 				type="text" 
 				placeholder="e.g Create TodoApp" 

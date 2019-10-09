@@ -25,7 +25,7 @@ class TodoItem extends React.Component {
 				</label>
 				<button 
 					onClick={ onClick } 
-					id={ key }> X
+					id={ key }> x
 				</button>
 			</li>
 		)

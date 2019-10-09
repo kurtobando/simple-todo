@@ -2,6 +2,7 @@ import React from 'react'
 import TodoItem from './TodoItem'
 
 
+
 class TodoList extends React.Component {
 
 	render() {
@@ -19,7 +20,7 @@ class TodoList extends React.Component {
 		
 		// render all <li> tags inside the renderTodoList array
 		return(
-			<ul>
+			<ul className="TodoApp__list">
 				{ renderTodoList }
 			</ul>
 		)
