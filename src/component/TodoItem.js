@@ -10,7 +10,7 @@ class TodoItem extends React.Component {
 		const isCompleted 	= this.props.listofToDoObj.isCompleted
 		const onChange 		= this.props.onChange
 		const onClick 		= this.props.onClick
-		const style			= isCompleted? { textDecoration : "line-through" } : null
+		const style			= isCompleted ? { textDecoration : "line-through", color: "#b3b3b3" } : null
 		
 		return(
 			<li key={ key } >

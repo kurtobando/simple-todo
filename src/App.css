@@ -76,13 +76,17 @@ input, button {
 
 .TodoApp__list li label {
 	width: 100%;
-	padding-top: 3px;
+/* 	padding-top: 3px; */
+	line-height: 2;
 }
 
 .TodoApp__list li button {
 	border-radius: 50%;
     padding: 0.2em 0.7em;
+	margin-top: 4px;
     border: none;
     color: white;
 	background-color: #fff;
+	
+	max-height: 25px;
 }
