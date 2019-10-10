@@ -5,6 +5,10 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+body > #root > div {
+	position: relative;
+}
+
 input, button {
 	font-family: inherit;
 }
@@ -13,7 +17,7 @@ input, button {
 	width: 100%;
 	max-width: 500px;
 	margin: 0 auto;
-	height: 100vh;
+	margin-bottom: 100px;
 	box-sizing: border-box;
 }
 
@@ -62,7 +66,7 @@ input, button {
 	display: flex;
 	justify-content: space-between;
 	background-color: #fff;
-	transition: 0.3s all;
+	transition: 0.2s all;
 }
 
 .TodoApp__list li:hover {
@@ -93,6 +97,26 @@ input, button {
     border: none;
     color: white;
 	background-color: #fff;
-	
 	max-height: 25px;
 }
+
+.TodoApp__footer {
+	text-align: center;
+	color: white;
+	background-color: #afa7a7;
+	height: 50px;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+	left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.TodoApp__footer a {
+	color: inherit;
+	font-size: 12px;
+    text-decoration: none;
+}
+

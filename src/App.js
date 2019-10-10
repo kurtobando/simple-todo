@@ -2,6 +2,7 @@ import React from 'react'
 import TodoForm from './component/TodoForm'
 import TodoList from './component/TodoList'
 import TodoData from './component/TodoData'
+import TodoFooter from './component/TodoFooter'
 import './Reset.css';
 import './App.css';
 
@@ -119,17 +120,21 @@ class App extends React.Component {
 	
 	render() {
 		return (
-			<div className="TodoApp">
-				<TodoForm 
-					onSubmit={ this.eventOnSubmit } 
-					onChange={ this.eventOnChange } 
-					value={ this.state.todoFormInput }
-				/>
-				<TodoList 
-					todoList={ this.state.todoList }
-					onChange={ this.eventOnChange }
-					onClick={ this.onClick }
-				/>
+			<div>
+				<div className="TodoApp">
+					<TodoForm 
+						onSubmit={ this.eventOnSubmit } 
+						onChange={ this.eventOnChange } 
+						value={ this.state.todoFormInput }
+					/>
+					<TodoList 
+						todoList={ this.state.todoList }
+						onChange={ this.eventOnChange }
+						onClick={ this.onClick }
+					/>
+
+				</div>
+				<TodoFooter />
 			</div>
 		)
 	}
