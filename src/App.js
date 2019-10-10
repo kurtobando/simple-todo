@@ -3,6 +3,7 @@ import TodoForm from './component/TodoForm'
 import TodoList from './component/TodoList'
 import TodoData from './component/TodoData'
 import TodoFooter from './component/TodoFooter'
+import TodoNotice from './component/TodoNotice'
 import './Reset.css';
 import './App.css';
 
@@ -12,8 +13,10 @@ class App extends React.Component {
 		super()
 		
 		this.state = {
-			todoFormInput : "",
-			todoList : TodoData
+			todoFormInput 		: "",
+			todoList 			: TodoData,
+			istodoNoticeActive 	: false,
+			todoNoticeText 		: ""
 		}
 		
 		this.eventOnChange 	= this.eventOnChange.bind( this )
@@ -64,6 +67,8 @@ class App extends React.Component {
 	
 	eventOnSubmit( event ) {
 		
+		this.renderNotice( 'Todo has been successfully added' )
+		
 		event.preventDefault()
 
 		this.setState(( prevState ) => {
@@ -95,6 +100,8 @@ class App extends React.Component {
 	
 	onClick( event ) {
 		
+		this.renderNotice( 'Todo has been successfully deleted' )
+		
 		let id = event.target.id 
 		
 		return this.setState(( prevState ) => {
@@ -118,9 +125,32 @@ class App extends React.Component {
 	
 	
 	
+	renderNotice = ( text ) => {
+		
+		this.setState({
+			istodoNoticeActive 	: true,
+			todoNoticeText 		: text
+		})
+		
+		setTimeout(() => {
+			return this.setState({
+				istodoNoticeActive 	: false,
+				todoNoticeText 		: ""
+			})
+		}, 2000)
+	}
+	
+	
+	
 	render() {
+		
 		return (
 			<div>
+				<TodoNotice 
+					istodoNoticeActive={ this.state.istodoNoticeActive }
+					todoNoticeText={ this.state.todoNoticeText }
+				/>
+				
 				<div className="TodoApp">
 					<TodoForm 
 						onSubmit={ this.eventOnSubmit } 
@@ -134,6 +164,7 @@ class App extends React.Component {
 					/>
 
 				</div>
+				
 				<TodoFooter />
 			</div>
 		)

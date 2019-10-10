@@ -120,3 +120,11 @@ input, button {
     text-decoration: none;
 }
 
+.TodoApp__notice {
+	text-align: center;
+    background-color: #deb887;
+    color: white;
+    font-size: 14px;
+    padding: 1rem;
+}
+

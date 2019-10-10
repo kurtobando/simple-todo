@@ -4,7 +4,7 @@ import React from 'react'
 
 function TodoFooter() {
 	return(
-		<footer class="TodoApp__footer">
+		<footer className="TodoApp__footer">
 			<a href="#test">Visit Github</a>
 		</footer>
 	)
