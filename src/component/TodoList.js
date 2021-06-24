@@ -3,8 +3,10 @@ import TodoItem from "./TodoItem"
 
 class TodoList extends React.Component {
     render() {
+        let renderTodoList
+
         // render earch object inside the todoList array
-        let renderTodoList = this.props.todoList
+        renderTodoList = this.props.todoList
             .sort((firstTodo, secondTodo) => {
                 return firstTodo.isCompleted - secondTodo.isCompleted
             })
@@ -19,6 +21,9 @@ class TodoList extends React.Component {
                 )
             })
 
+        if (this.props.todoList.length === 0) {
+            renderTodoList = <span class="No_Todo_Yet">No to-do added yet</span>
+        }
         // render all <li> tags inside the renderTodoList array
         return <ul className="TodoApp__list">{renderTodoList}</ul>
     }

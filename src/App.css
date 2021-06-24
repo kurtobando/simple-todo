@@ -100,6 +100,15 @@ button {
     max-height: 25px;
 }
 
+.TodoApp__list .No_Todo_Yet {
+    text-align: center;
+    display: block;
+    padding: 1rem;
+    font-size: 0.8em;
+    /* background-color: #ffffff; */
+    color: #928c8c;
+}
+
 .TodoApp__footer {
     text-align: center;
     color: white;
