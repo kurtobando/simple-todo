@@ -15,9 +15,10 @@ button {
 }
 
 .TodoApp {
-    width: 100%;
+    width: 95%;
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 3rem;
     margin-bottom: 100px;
     box-sizing: border-box;
 }
@@ -26,7 +27,7 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     margin-bottom: 2rem;
     background-color: #fff;
     border: 1px solid #f1f0f0;
@@ -86,6 +87,7 @@ button {
     width: 100%;
     font-size: 13px;
     line-height: 2;
+    word-wrap: break-word;
 }
 
 .TodoApp__list li button {
@@ -119,6 +121,10 @@ button {
 }
 
 .TodoApp__notice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     background-color: #deb887;
     color: white;

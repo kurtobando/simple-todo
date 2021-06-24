@@ -10,7 +10,7 @@ function TodoForm(props) {
         <form className="TodoApp__form" onSubmit={onsubmit}>
             <input
                 type="text"
-                placeholder="e.g Create TodoApp"
+                placeholder="What we gonna do today?"
                 name="todoFormInput"
                 onChange={onchange}
                 value={value}
