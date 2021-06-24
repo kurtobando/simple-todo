@@ -32,7 +32,7 @@ class App extends React.Component {
         if (type === "checkbox") {
             return this.setState((prevState) => {
                 // get all prevState of todoList and store object to 'listofToDoObj'
-                let arrayOfTodoList = prevState.todoList.map((listofToDoObj) => {
+                const arrayOfTodoList = prevState.todoList.map((listofToDoObj) => {
                     // if key and name value of checkbox match, alter isCompleted
                     // parseInt used to convert 'name' (String) to interger
                     if (listofToDoObj.key === parseInt(name)) {
@@ -57,25 +57,22 @@ class App extends React.Component {
     }
 
     onSubmit(event) {
-        this.renderNotice("Todo has been successfully added")
-
         event.preventDefault()
 
-        this.setState((prevState) => {
-            let arrayOfTodoList = prevState.todoList
-            let lastTodoList = arrayOfTodoList[arrayOfTodoList.length - 1] // get the last item in array
-            let lastTodoListKey = lastTodoList === undefined ? 0 : lastTodoList.key // get the last key
+        this.renderNotice("Todo has been successfully added")
 
-            // add new todo object to array of todos
-            arrayOfTodoList.push({
-                key: lastTodoListKey + 1,
+        this.setState((prevState) => {
+            const tempTodoList = prevState.todoList
+            const newTodoKey = tempTodoList.length + 1
+
+            tempTodoList.push({
+                key: newTodoKey,
                 text: this.state.todoFormInput,
                 isCompleted: false,
             })
 
-            // update the new state of todoList
             return {
-                todoList: arrayOfTodoList,
+                todoList: tempTodoList,
             }
         })
 
@@ -88,10 +85,10 @@ class App extends React.Component {
     onClick(event) {
         this.renderNotice("Todo has been successfully deleted")
 
-        let id = event.target.id
+        const id = event.target.id
 
         return this.setState((prevState) => {
-            let arrayOfTodoList = prevState.todoList.filter((listofToDoObj) => {
+            const arrayOfTodoList = prevState.todoList.filter((listofToDoObj) => {
                 // if id and object are not equal, do not remove object yet
                 if (parseInt(id) !== listofToDoObj.key) {
                     return listofToDoObj
