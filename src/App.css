@@ -1,40 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap");
 
 body {
-	background-color: #f9f9f9;
-	font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    font-family: "Poppins", sans-serif;
 }
 
 body > #root > div {
-	position: relative;
+    position: relative;
 }
 
-input, button {
-	font-family: inherit;
+input,
+button {
+    font-family: inherit;
 }
 
 .TodoApp {
-	width: 100%;
-	max-width: 800px;
-	margin: 0 auto;
-	margin-bottom: 100px;
-	box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    box-sizing: border-box;
 }
 
 .TodoApp__form {
-	display: flex;
-	justify-content: space-between;
-	padding: 2rem;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-	background-color: #fff;
-	border: 1px solid #f1f0f0;
-	border-bottom: 5px solid #afa7a7;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border: 1px solid #f1f0f0;
+    border-bottom: 5px solid #afa7a7;
 }
 
 .TodoApp__form > * {
     padding: 1rem;
-	border: 1px solid #f1f0f0;
+    border: 1px solid #f1f0f0;
 }
 
 .TodoApp__form > input {
@@ -44,87 +45,83 @@ input, button {
 .TodoApp__form > button {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-	border: 1px solid #404040;
-	background-color: #404040;
+    border: 1px solid #404040;
+    background-color: #404040;
     color: white;
 }
 
 .TodoApp__form > button:disabled {
-   	background-color: #afa7a7;
-	border: 1px solid #afa7a7;
+    background-color: #afa7a7;
+    border: 1px solid #afa7a7;
 }
 
-
-
-
 .TodoApp__list {
-	border: 1px solid #f1f0f0;
+    border: 1px solid #f1f0f0;
 }
 
 .TodoApp__list li {
-	padding:  2rem;
-	display: flex;
-	justify-content: space-between;
-	background-color: #fff;
-	transition: 0.2s all;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    transition: 0.2s all;
 }
 
 .TodoApp__list li:hover {
-	border-left: 5px solid #afa7a7;
+    border-left: 5px solid #afa7a7;
 }
 
-.TodoApp__list li:hover button{
-	background-color: #f1eded;
+.TodoApp__list li:hover button {
+    background-color: #f1eded;
 }
 
 .TodoApp__list li input {
-	padding: 0rem;
-	margin: 0rem;
-	margin-right: 1rem;
-	vertical-align: middle;
+    padding: 0rem;
+    margin: 0rem;
+    margin-right: 1rem;
+    vertical-align: middle;
 }
 
 .TodoApp__list li label {
-	width: 100%;
-	font-size: 13px;
-	line-height: 2;
+    width: 100%;
+    font-size: 13px;
+    line-height: 2;
 }
 
 .TodoApp__list li button {
-	border-radius: 50%;
+    border-radius: 50%;
     padding: 0.2em 0.7em;
-	margin-top: 4px;
+    margin-top: 4px;
     border: none;
     color: white;
-	background-color: #fff;
-	max-height: 25px;
+    background-color: #fff;
+    max-height: 25px;
 }
 
 .TodoApp__footer {
-	text-align: center;
-	color: white;
-	background-color: #afa7a7;
-	padding: 1rem;
-	display: flex;
+    text-align: center;
+    color: white;
+    background-color: #afa7a7;
+    padding: 1rem;
+    display: flex;
     justify-content: center;
     flex-direction: column;
-	left: 0;
+    left: 0;
     bottom: 0;
     position: fixed;
     width: 100%;
 }
 
 .TodoApp__footer a {
-	color: inherit;
-	font-size: 12px;
+    color: inherit;
+    font-size: 12px;
     text-decoration: none;
 }
 
 .TodoApp__notice {
-	text-align: center;
+    text-align: center;
     background-color: #deb887;
     color: white;
     font-size: 14px;
     padding: 1rem;
 }
-
