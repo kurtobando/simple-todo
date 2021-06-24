@@ -18,12 +18,12 @@ class App extends React.Component {
             todoNoticeText: "",
         }
 
-        this.eventOnChange = this.eventOnChange.bind(this)
-        this.eventOnSubmit = this.eventOnSubmit.bind(this)
+        this.onChange = this.onChange.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
         this.onClick = this.onClick.bind(this)
     }
 
-    eventOnChange(event) {
+    onChange(event) {
         const name = event.target.name
         const value = event.target.value
         const type = event.target.type
@@ -56,7 +56,7 @@ class App extends React.Component {
         })
     }
 
-    eventOnSubmit(event) {
+    onSubmit(event) {
         this.renderNotice("Todo has been successfully added")
 
         event.preventDefault()
@@ -131,12 +131,8 @@ class App extends React.Component {
                 />
 
                 <div className="TodoApp">
-                    <TodoForm
-                        onSubmit={this.eventOnSubmit}
-                        onChange={this.eventOnChange}
-                        value={this.state.todoFormInput}
-                    />
-                    <TodoList todoList={this.state.todoList} onChange={this.eventOnChange} onClick={this.onClick} />
+                    <TodoForm onSubmit={this.onSubmit} onChange={this.onChange} value={this.state.todoFormInput} />
+                    <TodoList todoList={this.state.todoList} onChange={this.onChange} onClick={this.onClick} />
                 </div>
 
                 <TodoFooter />
